@@ -12,6 +12,7 @@
 		73DF04381C71424300877F1F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73DF04361C71424300877F1F /* Main.storyboard */; };
 		73DF043A1C71424300877F1F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73DF04391C71424300877F1F /* Assets.xcassets */; };
 		73DF043D1C71424300877F1F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73DF043B1C71424300877F1F /* LaunchScreen.storyboard */; };
+		73DF044A1C71452000877F1F /* ZoomRotatePanImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 73DF04491C71452000877F1F /* ZoomRotatePanImageView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,9 @@
 		73DF04391C71424300877F1F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		73DF043C1C71424300877F1F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		73DF043E1C71424300877F1F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		73DF04471C7143FD00877F1F /* JeremyShake-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JeremyShake-Bridging-Header.h"; sourceTree = "<group>"; };
+		73DF04481C71452000877F1F /* ZoomRotatePanImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZoomRotatePanImageView.h; sourceTree = "<group>"; };
+		73DF04491C71452000877F1F /* ZoomRotatePanImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZoomRotatePanImageView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +58,9 @@
 		73DF04311C71424300877F1F /* JeremyShake */ = {
 			isa = PBXGroup;
 			children = (
+				73DF04471C7143FD00877F1F /* JeremyShake-Bridging-Header.h */,
+				73DF04481C71452000877F1F /* ZoomRotatePanImageView.h */,
+				73DF04491C71452000877F1F /* ZoomRotatePanImageView.m */,
 				73DF04321C71424300877F1F /* AppDelegate.swift */,
 				73DF04341C71424300877F1F /* ViewController.swift */,
 				73DF04361C71424300877F1F /* Main.storyboard */,
@@ -137,6 +144,7 @@
 			files = (
 				73DF04351C71424300877F1F /* ViewController.swift in Sources */,
 				73DF04331C71424300877F1F /* AppDelegate.swift in Sources */,
+				73DF044A1C71452000877F1F /* ZoomRotatePanImageView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,6 +261,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.JKProductions.JeremyShake;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "JeremyShake/JeremyShake-Bridging-Header.h";
 			};
 			name = Debug;
 		};
@@ -264,6 +273,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.JKProductions.JeremyShake;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "JeremyShake/JeremyShake-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -286,6 +296,7 @@
 				73DF04431C71424300877F1F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
