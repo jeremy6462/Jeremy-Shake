@@ -16,7 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		73DF042F1C71424300877F1F /* JeremyShake.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JeremyShake.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		73DF042F1C71424300877F1F /* Best Present!.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Best Present!.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		73DF04321C71424300877F1F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		73DF04341C71424300877F1F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		73DF04371C71424300877F1F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -50,7 +50,7 @@
 		73DF04301C71424300877F1F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				73DF042F1C71424300877F1F /* JeremyShake.app */,
+				73DF042F1C71424300877F1F /* Best Present!.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -88,7 +88,7 @@
 			);
 			name = JeremyShake;
 			productName = JeremyShake;
-			productReference = 73DF042F1C71424300877F1F /* JeremyShake.app */;
+			productReference = 73DF042F1C71424300877F1F /* Best Present!.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -260,8 +260,9 @@
 				INFOPLIST_FILE = JeremyShake/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.JKProductions.JeremyShake;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Best Present!";
 				SWIFT_OBJC_BRIDGING_HEADER = "JeremyShake/JeremyShake-Bridging-Header.h";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -272,8 +273,9 @@
 				INFOPLIST_FILE = JeremyShake/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.JKProductions.JeremyShake;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Best Present!";
 				SWIFT_OBJC_BRIDGING_HEADER = "JeremyShake/JeremyShake-Bridging-Header.h";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

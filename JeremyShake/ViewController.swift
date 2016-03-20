@@ -14,20 +14,52 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBOutlet weak var jeremyHead: UIImageView!
     @IBOutlet weak var chooseImageButton: UIButton!
     @IBOutlet weak var saveButton: UIButton!
-    @IBOutlet weak var imagesView: UIView!
+    @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var cancelButton: UIButton!
     @IBOutlet weak var background: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        background.image = UIImage(named: "background")
+        blurBackground()
+        background.hidden = false
+
         self.becomeFirstResponder()
     }
 
+    // MARK: - Set up base image
+    
     @IBAction func chooseImage(sender: AnyObject) {
-        let picker = UIImagePickerController()
-        picker.delegate = self
-        picker.sourceType = UIImagePickerControllerSourceType.Camera
-        self.presentViewController(picker, animated: true, completion: nil)
+        
+        let actionSheet = UIAlertController(title: nil, message: nil, preferredStyle: UIAlertControllerStyle.ActionSheet)
+        let cameraAction = UIAlertAction(title: "Take Photo with Camera", style: UIAlertActionStyle.Default) { (UIAlertAction) -> Void in
+            
+            let picker = UIImagePickerController()
+            picker.delegate = self
+            picker.sourceType = UIImagePickerControllerSourceType.Camera
+            self.presentViewController(picker, animated: true, completion: nil)
+            
+        }
+        let chooseImageAction = UIAlertAction(title: "Photo Library", style: UIAlertActionStyle.Default) { (UIAlertAction) -> Void in
+            
+            let picker = UIImagePickerController()
+            picker.delegate = self
+            picker.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
+            picker.allowsEditing = true
+            self.presentViewController(picker, animated: true, completion: nil)
+            
+        }
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Cancel, handler: nil)
+        
+        actionSheet.addAction(cancelAction)
+        actionSheet.addAction(cameraAction)
+        actionSheet.addAction(chooseImageAction)
+        
+        self.presentViewController(actionSheet, animated: true, completion: nil)
+        
+        
     }
     
     
@@ -49,9 +81,11 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     func blurBackground() {
         let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.Light)
         let blurredEffectView = UIVisualEffectView(effect: blurEffect)
-        blurredEffectView.frame = background.bounds
+        blurredEffectView.frame = self.view.frame
         background.addSubview(blurredEffectView)
     }
+    
+    // MARK: - Respond to shakes
     
     override func canBecomeFirstResponder() -> Bool {
         return true
@@ -64,11 +98,13 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         }
     }
     
+    // MARK: - Utilities
+    
     @IBAction func openShareSheet(sender: AnyObject) {
 
         UIGraphicsBeginImageContext(self.view.bounds.size)
         let context = UIGraphicsGetCurrentContext()
-        imagesView.layer.renderInContext(context!)
+        containerView.layer.renderInContext(context!)
         let screenImage = UIGraphicsGetImageFromCurrentImageContext()
         
         let activityVC = UIActivityViewController(activityItems: [screenImage], applicationActivities: nil)
@@ -84,12 +120,12 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         jeremyHead.image = nil
         jeremyHead.hidden = true
         
-        background.image = nil
-        background.hidden = true
+        background.image = UIImage(named: "background")
+        blurBackground()
+        background.hidden = false
         
         cancelButton.hidden = true
         saveButton.hidden = true
     }
     
 }
-
