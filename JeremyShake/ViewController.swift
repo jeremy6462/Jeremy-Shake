@@ -18,12 +18,19 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBOutlet weak var cancelButton: UIButton!
     @IBOutlet weak var background: UIImageView!
     
+    
+    @IBOutlet weak var firstInstruction: UILabel!
+    @IBOutlet weak var secondInstruction: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         background.image = UIImage(named: "background")
         blurBackground()
         background.hidden = false
+        
+        firstInstruction.layer.cornerRadius = 10
+        secondInstruction.layer.cornerRadius = 10
 
         self.becomeFirstResponder()
     }
@@ -46,7 +53,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             let picker = UIImagePickerController()
             picker.delegate = self
             picker.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
-            picker.allowsEditing = true
             self.presentViewController(picker, animated: true, completion: nil)
             
         }
@@ -66,6 +72,9 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage, editingInfo: [String : AnyObject]?) {
         
         self.dismissViewControllerAnimated(true, completion: nil)
+        
+        firstInstruction.hidden = true
+        secondInstruction.hidden = true
         
         imageTaken.image = image
         imageTaken.hidden = false
@@ -114,6 +123,10 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
 
     @IBAction func cancel(sender: AnyObject) {
+        
+        firstInstruction.hidden = false
+        secondInstruction.hidden = false
+        
         imageTaken.image = nil
         imageTaken.hidden = true
         
