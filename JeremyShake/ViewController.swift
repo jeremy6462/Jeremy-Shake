@@ -18,6 +18,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBOutlet weak var cancelButton: UIButton!
     @IBOutlet weak var background: UIImageView!
     
+    var currentJeremyHead = 0
     
     @IBOutlet weak var firstInstruction: UILabel!
     @IBOutlet weak var secondInstruction: UILabel!
@@ -27,7 +28,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
         background.image = UIImage(named: "background")
         blurBackground()
-        background.hidden = false
         
         firstInstruction.layer.cornerRadius = 10
         secondInstruction.layer.cornerRadius = 10
@@ -101,10 +101,25 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     
     override func motionBegan(motion: UIEventSubtype, withEvent event: UIEvent?) {
+        if imageTaken.image == nil {
+            return
+        }
         if motion == UIEventSubtype.MotionShake {
-            jeremyHead.image = UIImage(named: "JeremyHead")
+            let imageName = nextJeremyHead()
+            jeremyHead.image = UIImage(named: imageName)
             jeremyHead.hidden = false
         }
+    }
+    
+    func nextJeremyHead() -> String {
+        if (currentJeremyHead >= 21) {
+            currentJeremyHead = 1
+        } else if (currentJeremyHead < 21 && currentJeremyHead > 0) {
+            currentJeremyHead += 1
+        } else {
+            currentJeremyHead = 1
+        }
+        return "jeremyHead\(currentJeremyHead)"
     }
     
     // MARK: - Utilities
@@ -123,6 +138,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
 
     @IBAction func cancel(sender: AnyObject) {
+        
+        currentJeremyHead = 0
         
         firstInstruction.hidden = false
         secondInstruction.hidden = false
