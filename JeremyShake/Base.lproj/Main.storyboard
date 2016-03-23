@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="pM6-ye-dP0">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="pM6-ye-dP0">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
@@ -43,7 +43,7 @@
                                                     </mask>
                                                 </variation>
                                             </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="h4L-i1-g08" customClass="ZoomRotatePanImageView">
+                                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="h4L-i1-g08" customClass="ZoomRotatePanImageView">
                                                 <rect key="frame" x="230" y="230" width="140" height="140"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="140" id="20U-EE-D6Y"/>
@@ -85,8 +85,8 @@
                                         <rect key="frame" x="187" y="305" width="225" height="54"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="54" id="aD6-Jj-IPE"/>
-                                            <constraint firstAttribute="width" constant="225" id="fdO-z0-CCF"/>
+                                            <constraint firstAttribute="height" constant="54" id="4iK-8r-PYk"/>
+                                            <constraint firstAttribute="width" constant="225" id="faw-bS-UE4"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -117,26 +117,36 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="0cw-bp-ibc" firstAttribute="top" secondItem="9d1-Ry-Lwo" secondAttribute="top" id="1Mb-pc-DdI"/>
+                                    <constraint firstAttribute="bottom" secondItem="BG5-qm-Rxn" secondAttribute="bottom" constant="241" id="4Cr-Ha-55R"/>
                                     <constraint firstAttribute="trailing" secondItem="UxK-Hm-wF0" secondAttribute="trailing" constant="25" id="54m-fW-CDf"/>
                                     <constraint firstItem="0cw-bp-ibc" firstAttribute="leading" secondItem="kHn-qe-vXw" secondAttribute="leading" id="61c-A3-v1v"/>
                                     <constraint firstAttribute="trailing" secondItem="9d1-Ry-Lwo" secondAttribute="trailing" id="8rN-t5-Jzp"/>
-                                    <constraint firstItem="M7A-Qd-YxU" firstAttribute="centerX" secondItem="BG5-qm-Rxn" secondAttribute="centerX" id="91R-db-dqy"/>
                                     <constraint firstItem="FG0-KD-Nsd" firstAttribute="top" secondItem="frS-oc-39w" secondAttribute="bottom" constant="9" id="ACG-mb-aQ4"/>
                                     <constraint firstAttribute="bottom" secondItem="9d1-Ry-Lwo" secondAttribute="bottom" id="Efs-L2-OjN"/>
                                     <constraint firstItem="M7A-Qd-YxU" firstAttribute="top" secondItem="kHn-qe-vXw" secondAttribute="top" constant="243" id="PMj-4r-6G9"/>
-                                    <constraint firstItem="BG5-qm-Rxn" firstAttribute="top" secondItem="M7A-Qd-YxU" secondAttribute="bottom" constant="8" id="Q6U-lC-I32"/>
                                     <constraint firstItem="0cw-bp-ibc" firstAttribute="leading" secondItem="9d1-Ry-Lwo" secondAttribute="leading" id="SZb-S0-Gur"/>
+                                    <constraint firstItem="BG5-qm-Rxn" firstAttribute="centerX" secondItem="M7A-Qd-YxU" secondAttribute="centerX" id="Toa-JF-tQP"/>
                                     <constraint firstItem="FG0-KD-Nsd" firstAttribute="bottom" secondItem="UxK-Hm-wF0" secondAttribute="bottom" id="X71-fx-PA7"/>
                                     <constraint firstAttribute="bottom" secondItem="FG0-KD-Nsd" secondAttribute="bottom" constant="20" id="Yio-1J-Gpf"/>
                                     <constraint firstItem="0cw-bp-ibc" firstAttribute="top" secondItem="kHn-qe-vXw" secondAttribute="top" id="db6-fB-kkw"/>
+                                    <constraint firstItem="0cw-bp-ibc" firstAttribute="top" secondItem="M7A-Qd-YxU" secondAttribute="bottom" constant="-297" id="eNp-bm-uIJ"/>
                                     <constraint firstItem="FG0-KD-Nsd" firstAttribute="centerX" secondItem="9d1-Ry-Lwo" secondAttribute="centerX" id="hUF-Yi-jZI"/>
                                     <constraint firstItem="FG0-KD-Nsd" firstAttribute="bottom" secondItem="4Hs-hT-Jhy" secondAttribute="bottom" id="ik8-FS-Rsy"/>
                                     <constraint firstItem="UxK-Hm-wF0" firstAttribute="top" secondItem="4Hs-hT-Jhy" secondAttribute="top" id="k4w-48-1tY"/>
-                                    <constraint firstItem="BG5-qm-Rxn" firstAttribute="centerX" secondItem="FG0-KD-Nsd" secondAttribute="centerX" id="qch-vS-Ncd"/>
+                                    <constraint firstItem="BG5-qm-Rxn" firstAttribute="centerY" secondItem="frS-oc-39w" secondAttribute="centerY" constant="52" id="kMh-iF-t7p"/>
                                     <constraint firstItem="0cw-bp-ibc" firstAttribute="trailing" secondItem="9d1-Ry-Lwo" secondAttribute="trailing" id="ryY-p5-gyL"/>
                                     <constraint firstItem="4Hs-hT-Jhy" firstAttribute="leading" secondItem="kHn-qe-vXw" secondAttribute="leading" constant="25" id="vch-ve-dWm"/>
+                                    <constraint firstItem="BG5-qm-Rxn" firstAttribute="centerX" secondItem="FG0-KD-Nsd" secondAttribute="centerX" id="yPw-C4-DOe"/>
                                     <constraint firstItem="0cw-bp-ibc" firstAttribute="bottom" secondItem="9d1-Ry-Lwo" secondAttribute="bottom" id="ydO-lq-6X3"/>
+                                    <constraint firstItem="BG5-qm-Rxn" firstAttribute="top" secondItem="M7A-Qd-YxU" secondAttribute="bottom" constant="8" symbolic="YES" id="zut-ju-zwf"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="eNp-bm-uIJ"/>
+                                        <exclude reference="PMj-4r-6G9"/>
+                                        <exclude reference="4Cr-Ha-55R"/>
+                                    </mask>
+                                </variation>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>

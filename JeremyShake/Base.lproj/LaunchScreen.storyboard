@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -17,32 +17,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="to my loving girlfriend," textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gQx-5Z-2OV">
-                                <rect key="frame" x="163" y="222" width="275" height="65"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="275" id="12s-HC-KjU"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Zapfino" family="Zapfino" pointSize="19"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kristiana" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rys-Tx-gDq">
                                 <rect key="frame" x="215" y="281" width="171" height="92"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="171" id="Gp7-fy-jiY"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Zapfino" family="Zapfino" pointSize="27"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="to my loving girlfriend," textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gQx-5Z-2OV">
+                                <rect key="frame" x="172" y="222" width="268" height="65"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="268" id="12s-HC-KjU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Zapfino" family="Zapfino" pointSize="19"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="0.95363405706531457" green="0.9499594360435506" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="gQx-5Z-2OV" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="202" id="A8F-zd-Q0X"/>
-                            <constraint firstItem="gQx-5Z-2OV" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Xhf-Sk-H7o"/>
+                            <constraint firstItem="gQx-5Z-2OV" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" constant="6" id="Xhf-Sk-H7o"/>
                             <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="gQx-5Z-2OV" secondAttribute="bottom" constant="313" id="cdj-9Q-6Gz"/>
                             <constraint firstItem="rys-Tx-gDq" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="261" id="fam-jb-PjJ"/>
-                            <constraint firstItem="rys-Tx-gDq" firstAttribute="centerX" secondItem="gQx-5Z-2OV" secondAttribute="centerX" id="p1G-HC-CrS"/>
+                            <constraint firstItem="rys-Tx-gDq" firstAttribute="centerX" secondItem="gQx-5Z-2OV" secondAttribute="centerX" constant="-5.5" id="p1G-HC-CrS"/>
                             <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="rys-Tx-gDq" secondAttribute="bottom" constant="227" id="vbN-oB-W4J"/>
                         </constraints>
                     </view>

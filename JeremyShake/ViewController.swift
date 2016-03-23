@@ -101,7 +101,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     
     override func motionBegan(motion: UIEventSubtype, withEvent event: UIEvent?) {
-        if imageTaken.image == nil {
+        if imageTaken.image == nil { // if no image has been taken
             return
         }
         if motion == UIEventSubtype.MotionShake {
